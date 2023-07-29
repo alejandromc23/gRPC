@@ -1,0 +1,40 @@
+{
+  "name": "@state-transitions/definition",
+  "version": "0.0.0",
+  "description": "The state transitions service definition",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "👇required package scripts": "",
+    "build": "pnpm run generate; unbuild;",
+    "clean": "rm -rf ./dist ./src/proto",
+    "dev": "nodemon -e proto --watch proto/ --exec \"pnpm run build\"",
+    "test": "echo \"@state-transitions/definition does not require test\"; exit 0;",
+    "format": "buf format -w",
+    "lint": "buf lint",
+    "☝️ required package scripts": "",
+    "generate": "buf generate"
+  },
+  "dependencies": {
+    "@bufbuild/protobuf": "^1.3.0"
+  },
+  "devDependencies": {
+    "@bufbuild/buf": "^1.25.0",
+    "@bufbuild/protoc-gen-connect-es": "^0.12.0",
+    "@bufbuild/protoc-gen-es": "^1.3.0",
+    "nodemon": "^3.0.1",
+    "unbuild": "1.2.0"
+  }
+}

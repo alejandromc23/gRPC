@@ -1,0 +1,42 @@
+{
+  "name": "@state-transitions/service",
+  "version": "0.0.0",
+  "description": "The state transitions service",
+  "type": "module",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "👇required package scripts": "",
+    "build": "unbuild",
+    "clean": "rm -rf dist",
+    "dev": "echo \"@state-transitions/service `dev` not implemented\"; exit 0;",
+    "format": "echo \"@state-transitions/service `format` not implemented\"; exit 0;",
+    "lint": "echo \"@state-transitions/service `lint` not implemented\"; exit 0;",
+    "test": "echo \"@state-transitions/service `test` not implemented\"; exit 0;",
+    "typecheck": "tsc --noEmit",
+    "☝️ required package scripts": "",
+    "start": "node dist/index.mjs"
+  },
+  "dependencies": {
+    "@bufbuild/connect": "^0.12.0",
+    "@bufbuild/connect-fastify": "^0.12.0",
+    "@state-transitions/definition": "workspace:^0.0.0",
+    "fastify": "^4.21.0"
+  },
+  "devDependencies": {
+    "@bufbuild/protobuf": "1.2.1",
+    "unbuild": "1.2.0"
+  },
+  "peerDependencies": {
+    "@bufbuild/protobuf": "1.2.1"
+  }
+}
